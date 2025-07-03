@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Card</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+    <h1 style="text-align: center; font-size: 2.5rem;">Sizzling Feast Rice</h1>
+    <div class="context">
+        <section class="first">
+            <div class="box">
+                <div class="image-container">
+                <img src="https://th.bing.com/th/id/OIP.Jk78OCAnC3HVs6hmWrbSsAHaJ-?w=768&h=1035&rs=1&pid=ImgDetMain&cb=idpwebpc1" alt="Fried Rice😋">
+                <img src="https://www.licious.in/blog/wp-content/uploads/2022/12/Shutterstock_1043177881.jpg" alt="Fried Rice😋">
+                </div>
+            </div>
+            <div class="box">
+                <button onclick='toggle("items", this)'>Show Ingredients</button>
+                <div id="items" style="display: none;">
+                <h2>Ingredients:</h2>
+                <ol>
+                    <li>Cooked Rice – 2 cups </li>
+                    <li>Vegetable Oil – 2 tbsp</li>
+                    <li>Garlic – 1 tbsp (finely chopped)</li>
+                    <li>Carrot – ½ cup </li>
+                    <li>Beans – ¼ cup</li>
+                    <li>Onions – ¼ cup </li>
+                    <li>Cabbage – ¼ cup </li>
+                    <li>Green Chilli – 1 </li>
+                    <li>Soya Sauce – 1 tbsp </li>
+                    <li>Vinegar – 1 tsp</li>
+                    <li>Salt – ¼ tsp</li>
+                </ol>
+                </div>
+            </div>
+        </section>
+        <section class="first">
+            <div class="box">
+                <h3>Time taken to prepare the dish</h3>
+                <p style="text-align: center;">Probably 30 minutes.</p>
+                <p>You can set the timer below and can start making your dish within time.</p>
+                <div id="timer" style="box-shadow: none;">00:00:00</div>
+                <button onclick="startTimer()">Start Timer</button>
+                <button onclick="stopTimer()">Stop Timer</button>
+                <button onclick="resetTimer()">Reset Timer</button>
+            </div>
+            <div class="box">
+                <button onclick='toggle("steps", this)'>Show Steps</button>
+                <div id="steps" style="display: none;">
+                <h2>Process</h2>
+                <p>Here is the step-by-step process to make your dish Ready!!!</p>
+                <ul>
+                    <li>Prepare the Rice: If using freshly cooked rice, spread it out and let it cool completely to prevent stickiness.</li>
+                    <li>Heat Oil: In a wok or large pan, heat vegetable oil on high flame.</li>
+                    <li>Sauté Aromatics: Add chopped garlic and ginger, stir-fry for 30 seconds until fragrant.</li>
+                    <li>Cook Vegetables: Toss in carrots, bell peppers, beans, cabbage, and green chili. Stir-fry for 2-3 minutes until slightly tender but still crunchy.</li>
+                    <li>Add Rice: Mix in the cooled rice and stir-fry for 2 minutes to coat it with flavors.</li>
+                    <li>Season & Flavor: Pour in soy sauce, vinegar, salt, and black pepper. Stir well to combine.</li>
+                    <li>Eggs (Optional): If using eggs, scramble them separately and mix them into the rice.</li>
+                    <li>Garnish & Serve: Sprinkle chopped spring onions on top and serve hot with chili paneer or manchurian.</li>
+                </ul>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                <button onclick="startCooking()">Start Cooking</button>
+                <button onclick="nextStep()">Next Step</button>
+
+                <p style="font-size: 1rem;">And then, Your favourite dish is ready...</p>
+                <p class="typing-txt" style="font-size: 1.8rem; white-space: nowrap; margin: 0; padding: 0;">Enjoy your homemade Fried Rice!</p>
+            </div>
+        </section>
+    </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
